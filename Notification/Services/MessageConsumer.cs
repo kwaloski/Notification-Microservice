@@ -14,10 +14,10 @@ namespace Notification.Services
 {
     public class MessageConsumer : BackgroundService, IMessageConsumer
     {
-        public static string FullAccessConnectionString { get; set; } = "Endpoint=sb://healthcare.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=Rv6QKxZY/OgLJQdBAwOeX3ZzhJasctahGvGVLWlSgPM=>";
-        public static string NotificationHubName { get; set; } = "HealthCare/Healthcare-Hub";
+        public static string FullAccessConnectionString { get; set; } = "";
+        public static string NotificationHubName { get; set; } = "";
         private const string FcmSampleNotificationContent = "{\"data\":{\"message\":\"Notification Hub test notification from SDK sample\"}}";
-        private const string deviceKey = "AAAA46UfCnA:APA91bFnjKci00kEh07MlEzoWEqEtBvCen0bBS0RS75AulPr-vzLGWzS8S-wY--H7w_KldIO38494P6vPZXL2kCxAQqjF8rD6ni9ZxNsFWEubNd3Eoui7boUzFjD-4RODIjH4brFzU4r";
+        private const string deviceKey = "";
         private readonly IQueueClient _queueClient;
         List<Device> getDevice = new List<Device>();
         public MessageConsumer(IQueueClient queueClient){
